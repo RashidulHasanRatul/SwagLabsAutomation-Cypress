@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RashidulHasanRatul/SwagLabsAutomation-Cypress/issues"
   },
-  "homepage": "https://github.com/RashidulHasanRatul/SwagLabsAutomation-Cypress#readme"
+  "homepage": "https://github.com/RashidulHasanRatul/SwagLabsAutomation-Cypress#readme",
+  "dependencies": {
+    "cypress": "10.3.0"
+  }
 }
