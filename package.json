@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "qa": "npx cypress open --config-file=qaserver.config.js",
+    "dev": "npx cypress open --config-file=devserver.config.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/RashidulHasanRatul/SwagLabsAutomation-Cypress#readme",
   "dependencies": {
-    "cypress": "10.3.0"
+    "cypress": "10.3.0",
+    "deepmerge": "^4.2.2"
   }
 }
