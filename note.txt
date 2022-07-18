@@ -1,0 +1,15 @@
+Configuring Cypress To Run On Different Environments at cypress 10 or later version?
+
+https://glebbahmutov.com/blog/cypress-v10-env/
+
+In this example, a username and password value are set form the run script but you can also set something like --env testenv=1 and then have logic like:
+if (config.env.testenv) {
+        return {
+          config: property
+        }
+} else return {
+  default config
+}
+
+run qa server config file :  npx cypress open --config-file=qaserver.config.js
+run dev server config file :  npx cypress open --config-file=devserver.config.js
