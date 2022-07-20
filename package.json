@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "qa": "npx cypress open --config-file=qaserver.config.js",
-    "dev": "npx cypress open --config-file=devserver.config.js"
+    "qa": "npx cypress open --config-file=server-config/qaserver.config.js",
+    "dev": "npx cypress open --config-file=server-config/devserver.config.js"
   },
   "repository": {
     "type": "git",

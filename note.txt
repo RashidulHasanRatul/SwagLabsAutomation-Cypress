@@ -13,3 +13,5 @@ if (config.env.testenv) {
 
 run qa server config file :  npx cypress open --config-file=qaserver.config.js
 run dev server config file :  npx cypress open --config-file=devserver.config.js
+
+JS Revision 
