@@ -10,8 +10,11 @@
 //
 //
 // -- This is a parent command --
-Cypress.Commands.add("login", (email, password) => {
-    
+Cypress.Commands.add("login", (username, password) => {
+  cy.visit("");
+  cy.get('[data-test="username"]').type(username, { log: false });
+  cy.get('[data-test="password"]').type(password, { log: false });
+  cy.get('[data-test="login-button"]').click();
 });
 //
 //
