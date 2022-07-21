@@ -44,5 +44,6 @@ module.exports = defineConfig({
     },
     baseUrl: "https://example.cypress.io",
     watchForFileChanges: false,
+    projectId: "r81jjm",
   },
 });
