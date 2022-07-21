@@ -15,4 +15,5 @@ module.exports = defineConfig({
     viewportWidth: 1920,
     viewportHeight: 1080,
   },
+  projectId: "r81jjm",
 });
