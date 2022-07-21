@@ -1,6 +1,5 @@
 const { defineConfig } = require("cypress");
 
-
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
@@ -23,21 +22,21 @@ module.exports = defineConfig({
         }
       }
 
-      module.exports = (on,config)=>{
-        on('task',{
-          readFiles(folderName){
-            return new Promise(resolve,reject){
-              fs.readdir(folderName,(err,files)=>{
-                if(err){
-                  return reject(err)
+      module.exports = (on, config) => {
+        on("task", {
+          readFiles(folderName) {
+            return new Promise((resolve, reject) => {
+              fs.readdir(folderName, (err, files) => {
+                if (err) {
+                  return reject(err);
                 }
-                resolve(files)
-              })
-            }
-          }
-        })
-        return loadconfig(config.config)
-      }
+                resolve(files);
+              });
+            });
+          },
+        });
+        return loadconfig(config.config);
+      };
     },
     env: {
       name: "Ratul",
@@ -45,5 +44,6 @@ module.exports = defineConfig({
     },
     baseUrl: "https://example.cypress.io",
     watchForFileChanges: false,
+    projectId: "r81jjm",
   },
 });
