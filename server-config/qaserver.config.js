@@ -5,7 +5,10 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    env: {},
+    env: {
+      userName: "standard_user",
+      passWord: "secret_sauce",
+    },
     baseUrl: "https://www.saucedemo.com/",
     watchForFileChanges: false,
     chromeWebSecurity: false,
