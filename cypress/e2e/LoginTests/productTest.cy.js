@@ -18,5 +18,6 @@ describe("Test Product ", () => {
         cy.get("#item_4_title_link > .inventory_item_name").click();
       }
     });
+    cy.log("This is Automation Test")
   });
 });
