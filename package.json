@@ -1,0 +1,25 @@
+{
+  "name": "swaglabsautomation-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "qa": "npx cypress open --config-file=server-config/qaserver.config.js",
+    "dev": "npx cypress open --config-file=server-config/devserver.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RashidulHasanRatul/SwagLabsAutomation-Cypress.git"
+  },
+  "author": "Rashidul Hasan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RashidulHasanRatul/SwagLabsAutomation-Cypress/issues"
+  },
+  "homepage": "https://github.com/RashidulHasanRatul/SwagLabsAutomation-Cypress#readme",
+  "dependencies": {
+    "cypress": "10.3.0",
+    "deepmerge": "^4.2.2"
+  }
+}
