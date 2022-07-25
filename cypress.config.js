@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const cucumber = require("cypress-cucumber-preprocessor").default;
 
 module.exports = defineConfig({
   e2e: {
@@ -23,6 +24,7 @@ module.exports = defineConfig({
       }
 
       module.exports = (on, config) => {
+        on("file:preprocessor", cucumber());
         on("task", {
           readFiles(folderName) {
             return new Promise((resolve, reject) => {
@@ -45,5 +47,8 @@ module.exports = defineConfig({
     baseUrl: "https://example.cypress.io",
     watchForFileChanges: false,
     projectId: "r81jjm",
+    specFiles: "e2e/**/*.feature",
+    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
+    
   },
 });
