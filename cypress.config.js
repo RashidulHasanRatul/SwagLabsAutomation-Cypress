@@ -48,7 +48,6 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     projectId: "r81jjm",
     specFiles: "e2e/**/*.feature",
-    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     
   },
 });
