@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import ProductPage from "../../Pages/productPage";
+import ProductPage from "../../../Pages/productPage";
 const userName = Cypress.env("userName");
 const passWord = Cypress.env("passWord");
 const Product = new ProductPage();

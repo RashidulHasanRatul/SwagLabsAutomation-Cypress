@@ -47,7 +47,8 @@ module.exports = defineConfig({
     baseUrl: "https://example.cypress.io",
     watchForFileChanges: false,
     projectId: "r81jjm",
-    specFiles: "e2e/**/*.feature",
+    specPattern:"cypress/e2e/features/*.feature",
+    chromeWebSecurity: false,
     
   },
 });
