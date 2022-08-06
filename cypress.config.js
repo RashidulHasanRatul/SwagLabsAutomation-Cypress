@@ -1,6 +1,12 @@
 const { defineConfig } = require("cypress");
 const cucumber = require("cypress-cucumber-preprocessor").default;
 
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const addCucumberPreprocessorPlugin =
+  require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin;
+const createEsbuildPlugin =
+  require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
+
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
@@ -39,6 +45,16 @@ module.exports = defineConfig({
         });
         return loadconfig(config.config);
       };
+
+      // code for Cucumber Preprocessor
+      const bundler = createBundler({
+        plugins: [createEsbuildPlugin(config)],
+      });
+
+      on("file:preprocessor", bundler);
+      addCucumberPreprocessorPlugin(on, config);
+
+      return config;
     },
     env: {
       name: "Ratul",
@@ -47,8 +63,7 @@ module.exports = defineConfig({
     baseUrl: "https://example.cypress.io",
     watchForFileChanges: false,
     projectId: "r81jjm",
-    specPattern:"cypress/e2e/features/*.feature",
+    specPattern: "cypress/e2e/features/*.feature",
     chromeWebSecurity: false,
-    
   },
 });

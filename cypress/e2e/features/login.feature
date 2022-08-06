@@ -1,10 +1,11 @@
-Feature: Login Page 
-    Feature Login page will work depending on the user credentials.
-    Background: 
-    Given that I am on the login page
-Scenario: Success Login
-    When A user enters valid username "standard_user"
-    And enters valid password "secret_sauce"
-    And clicks on login button
-    Then I should be on the My Home  page
+Feature: Login page
 
+    Feature Login page will work depending on the user credentials.
+
+    Background:
+        Given A user opens a saucelabs website
+    Scenario: Success Login
+        When A user enters the username "standard_user"
+        And A user enters the password "secret_sauce"
+        And A user clicks on the login button
+        Then the url will contains the inventory subdirectory
