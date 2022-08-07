@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "qa": "npx cypress open --config-file=server-config/qaserver.config.js",
+    "qa-html-report": "npx cypress run --config-file=server-config/qaserver.config.js --browser chrome --headed",
     "dev": "npx cypress open --config-file=server-config/devserver.config.js",
     "cy:run": "npx cypress run --record --key 2f6cef8e-d9d3-4b44-abc7-52a9a926bf73 --config-file=server-config/qaserver.config.js",
     "run:docker": "docker build -f Dockerfile -t swaglabcypressautomation ."
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
     "cypress": "^10.4.0",
+    "cypress-mochawesome-reporter": "^3.2.0",
     "esbuild": "^0.14.53"
   },
   "cypress-cucumber-preprocessor": {
