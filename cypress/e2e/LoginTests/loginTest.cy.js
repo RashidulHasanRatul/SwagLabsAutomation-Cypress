@@ -1,4 +1,4 @@
-import LoginPageObjects from "../../../Pages/loginPageObjects";
+import LoginPageObjects from "../../Pages/loginPageObjects";
 const loginTestPageOBJ = new LoginPageObjects();
 const userName = Cypress.env("userName");
 const passWord = Cypress.env("passWord");
