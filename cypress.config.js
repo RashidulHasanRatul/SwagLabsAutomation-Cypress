@@ -1,8 +1,11 @@
 const { defineConfig } = require("cypress");
+const cucumber = require("cypress-cucumber-preprocessor").default;
 
 module.exports = defineConfig({
+  reporter: "cypress-mochawesome-reporter",
   e2e: {
     setupNodeEvents(on, config) {
+      require("cypress-mochawesome-reporter/plugin")(on);
       // implement node event listeners here
       const deepmerge = require("deepmerge");
       const path = require("path");
@@ -45,5 +48,6 @@ module.exports = defineConfig({
     baseUrl: "https://example.cypress.io",
     watchForFileChanges: false,
     projectId: "r81jjm",
+    chromeWebSecurity: false,
   },
 });
